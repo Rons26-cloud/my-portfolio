@@ -34,6 +34,9 @@ nav ul {
   justify-content: center;
   gap: 25px;
   margin-bottom: 25px;
+  flex-direction: row;   /* ✅ tetap horizontal */
+  flex-wrap: wrap;       /* ✅ responsif agar tidak overflow */
+  padding: 0;
 }
 
 nav a {
@@ -42,12 +45,14 @@ nav a {
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s ease;
+  white-space: nowrap;   /* ✅ biar teks menu tidak pecah */
 }
 
 nav a:hover {
   color: #00ffaa;
   text-decoration: underline;
 }
+
 
 /* PROFILE FRAME */
 .profile-frame-container {
@@ -195,14 +200,14 @@ footer {
     margin-bottom: 20px;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
+  /* ✅ Jangan ubah nav ul jadi column */
 
   nav a {
     font-size: 16px;
   }
+
+  ...
+}
 
   .profile-frame-container {
     width: 150px;
