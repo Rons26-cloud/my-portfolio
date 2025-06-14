@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= title %></title>
+
+  <!-- Font Awesome CSS untuk ikon sosial media -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- CSS utama -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Musik Latar -->
+  <audio id="bg-music" src="/audio/bg-music.mp3" autoplay loop></audio>
+  <script>
+    const music = document.getElementById('bg-music');
+    music.volume = 0.5;
+    document.addEventListener('click', () => {
+      if (music.paused) music.play();
+    });
+  </script>
+
+  <!-- Navigasi -->
+  <nav>
+    <ul>
+      <li><a href="/">Beranda</a></li>
+      <li><a href="/about">Tentang Saya</a></li>
+      <li><a href="/gallery">Galeri</a></li>
+      <li><a href="/contact">Kontak</a></li>
+      <a href="/gallery-album">Galeri Album</a>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Selamat Datang di Portofolio Saya</h1>
+    <p>“Bermula dari mimpi kecil, menuju karya besar.”</p>
+  </header>
+
+  <!-- Foto Profil dengan Bingkai -->
+  <div class="profile-frame-container">
+    <img src="/img/frame.png" class="frame" alt="Bingkai" />
+    <img src="/img/profile.jpg" class="photo" alt="Foto Profil" />
+  </div>
+
+  <!-- Deskripsi -->
+  <main>
+    <h2>Hai, saya <span id="name">RONY_SAPUTRA</span></h2>
+    <p>Saya adalah seorang web developer AI yang berfokus pada membangun website kreatif dan fungsional. Di sini kamu bisa melihat project, CV, dan mengenal saya lebih dekat.</p>
+
+    <div class="buttons">
+      <a href="/cv/your-cv.pdf" download class="btn-cv">Download CV</a>
+      <a href="https://github.com/Rons26-cloud" target="_blank" rel="noopener noreferrer" class="btn-cv">GitHub</a>
+    </div>
+
+    <div class="social-links">
+      <a href="mailto:email@example.com" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-envelope"></i> Email
+      </a> | 
+      <a href="https://wa.me/123456789" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a> | 
+      <a href="https://www.instagram.com/xyrons_26/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Instagram
+      </a> | 
+      <a href="https://tiktok.com/@username" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 - Dibuat dengan ❤️ oleh RONY_SAPUTRA</p>
+  </footer>
+
+  <script src="/js/profile-frame.js"></script>
+</body>
+</html>
